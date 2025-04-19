@@ -99,7 +99,7 @@ button:hover {
   padding: 16px 24px;
 
   border: 0;
-  outline: none;
+
   border-radius: 8px;
 
   transition: 150ms ease-in-out;
@@ -128,12 +128,9 @@ button:hover {
 
 .grid-main {
   display: grid;
-  grid-template-columns: 1fr calc((100% - 48px) / 3) 1fr;
+  grid-template-columns: 4px repeat(3, calc((100% - 48px -20px * 2) / 3)) 4px;
+  gap: 20px;
 }
-
-/* .grid-content {
-  grid-column: 2/3;
-} */
 
 .topnav {
   display: flex;
@@ -162,11 +159,14 @@ button:hover {
 /* 800px */
 @media (width > 50em) {
   body {
-    padding-block: 55px;
+    padding-block: 40px;
   }
 
+
   .grid-main {
-    grid-template-columns: 1fr repeat(3, calc((100% - 48px) / 3) 1fr);
+    display: grid;
+    grid-template-columns: 4px repeat(3, calc((100% - 48px -20px * 2) / 3)) 4px;
+    gap: 20px;
   }
 }
 
